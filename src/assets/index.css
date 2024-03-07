@@ -1,0 +1,158 @@
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --body-bg: #eeeeee;
+    --body-color: #111111;
+    --primary: #333333;
+    --secondary: #404040;
+    --tertiary: grey;
+  }
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #111111;
+    --body-color: #eeeeee;
+    --primary: grey;
+    --secondary: #404040;
+    --tertiary: #333333;
+  }
+}
+
+/* 320 - 480px for small phones such as iPhone 6, 7, and 5 */
+@media screen and (min-width: 480px) {
+  /* body {
+    margin: 0 3%;
+  } */
+}
+/* 478 - 768px for Tablets and iPads */
+@media screen and (min-width: 768px) {
+  /* body {
+    margin: 0 10%;
+  } */
+}
+/* 1025 - 1200px for desktops and large screens */
+@media screen and (min-width: 1025px) {
+  /* body {
+    margin: 0 20%;
+  } */
+}
+
+* {
+  font-family: Helvetica;
+}
+
+html,
+body {
+  /* margin: 0 10%; */
+  padding: 0;
+  background: var(--body-bg);
+  color: var(--body-color);
+}
+a:link {
+  color: inherited;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--primary);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 1px 0 0 var(--tertiary);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 700px;
+  width: calc(100% - 40px);
+}
+nav {
+  background: var(--body-bg);
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+nav ul {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 15px 20px 15px 0;
+  color: var(--primary);
+  cursor: pointer;
+}
+.active {
+  color: var(--body-color);
+}
+
+main {
+  padding-top: 63px;
+}
+.entry {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 0px;
+}
+.top,
+.bottom {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+.source {
+  font-size: 13px;
+}
+.source a {
+  color: inherit;
+}
+.date {
+  font-size: 13px;
+  color: var(--secondary);
+  margin-left: 10px;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding-right: 80px;
+}
+.title a {
+  color: inherit;
+}
+.image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* margin-bottom: 15px; */
+}
+.articles,
+.reads {
+  font-size: 13px;
+  color: var(--secondary);
+  margin-right: 10px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--tertiary);
+  margin: 15px 0;
+}
+
+footer {
+  color: var(--primary);
+}
